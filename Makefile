@@ -4,9 +4,9 @@ SRCS	=
 
 HEADER	=	pipex.h
 
-OBJ		=	$(patsubst %.c, %.o. $(SRCS))	# узнать что такое $(SRCS) для функции putsubst
+OBJ	=	$(patsubst %.c, %.o. $(SRCS))	# узнать что такое $(SRCS) для функции putsubst
 
-CC		=	gcc
+CC	=	gcc
 
 CFLAGS	=	-Wall -Wextra -Werror
 
@@ -15,9 +15,9 @@ CFLAGS	=	-Wall -Wextra -Werror
 $(NAME)	:	$(OBJ) $(HEADER)
 	ar rcs $(NAME) $?
 
-all		:	$(NAME)
+all	:	$(NAME)
 
-%.o		:	%.c $(HEADER)
+%.o	:	%.c $(HEADER)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean	:
@@ -26,4 +26,4 @@ clean	:
 fclean	:	clean
 	rm -rf $(NAME)
 
-re		:	fclean all
+re	:	fclean all
