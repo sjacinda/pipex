@@ -1,29 +1,29 @@
-NAME	=	pipex.a
+NAME = pipex
 
-SRCS	=
+SRCS = pipex.c
 
-HEADER	=	pipex.h
+HEADER = pipex.h
 
-OBJ	=	$(patsubst %.c, %.o. $(SRCS))	# узнать что такое $(SRCS) для функции putsubst
+OBJ = $(patsubst %.c, %.o, $(SRCS))	# $(SRCS) это текст в котором произойдёт замена == $(SRCS:%.c=%.o)
 
-CC	=	gcc
+CC = gcc	# переменная компилятора
 
-CFLAGS	=	-Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror	# флаги компиляции
 
-.PHONY	=	all clean fclean re
+.PHONY = all clean fclean re	# исключаемые файлы, если такие есть
 
-$(NAME)	:	$(OBJ) $(HEADER)
+$(NAME): $(OBJ) $(HEADER)
 	ar rcs $(NAME) $?
 
-all	:	$(NAME)
+all: (NAME)
 
-%.o	:	%.c $(HEADER)
+%.o: %.c $(HEADER)
 	$(CC) $(CFLAGS) -c $< -o $@
 
-clean	:
+clean:
 	rm -rf $(OBJ)
 
-fclean	:	clean
+fclean: clean
 	rm -rf $(NAME)
 
-re	:	fclean all
+re: fclean all
