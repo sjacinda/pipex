@@ -6,9 +6,13 @@
 /*   By: sjacinda <sjacinda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/08 14:13:04 by sjacinda          #+#    #+#             */
-/*   Updated: 2021/12/10 14:14:17 by sjacinda         ###   ########.fr       */
+/*   Updated: 2021/12/11 17:47:30 by sjacinda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "pipex.h"
 
+void	pipex(int argc, char **argv, char **envp)
+{
+
+}
